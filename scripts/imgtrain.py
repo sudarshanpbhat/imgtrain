@@ -1,8 +1,10 @@
 import argparse
 from PIL import Image
 
-DEFAULT_BORDER_SIZE = 20
-DEFAULT_SPACE_BETWEEN_IMAGES = 20
+DEFAULT_BORDER_SIZE = 30
+DEFAULT_SPACE_BETWEEN_IMAGES = 30
+DEFAULT_BACKGROUND_COLOR = "#eeeeee"
+DEFAULT_OUTPUT_FILE = "output.jpeg"
 
 # Returns a tuple containg the output image's width and height 
 def get_output_image_size(file_list, border_size, space_between_images): 
@@ -35,10 +37,10 @@ def merge_images(output_image_width, output_image_height, file_list, border_size
 def main():
   parser = argparse.ArgumentParser()
   parser.add_argument('image_files', nargs='+', type=argparse.FileType('r'))
-  parser.add_argument('--bg-color', default='#EEEEEE', help="Set the background image color")
-  parser.add_argument('--border-size', default=20, help="Set the border size.", type=int)
-  parser.add_argument('--space-between-images', default=20, help="Set space between images.", type=int)
-  parser.add_argument('-o', '--output', default='output.jpeg', help="Set output file name.", type=argparse.FileType('w'))
+  parser.add_argument('--bg-color', default=DEFAULT_BACKGROUND_COLOR, help="Set the background image color")
+  parser.add_argument('--border-size', default=DEFAULT_BORDER_SIZE, help="Set the border size.", type=int)
+  parser.add_argument('--space-between-images', default=DEFAULT_SPACE_BETWEEN_IMAGES, help="Set space between images.", type=int)
+  parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT_FILE, help="Set output file name.", type=argparse.FileType('w'))
   args = parser.parse_args()
 
   # Get list of files passed as arguments

@@ -6,9 +6,19 @@ Simple command-line utility to merge a set of images/screenshots into a banner w
 
 <img src="./images/demo.gif" /> <br />
 
-## Download
+## Download and setup
 
-Download the latest binary from [releases](https://github.com/sudarshanpbhat/imgtrain/releases). 
+Download the latest binary from the repo's [releases](https://github.com/sudarshanpbhat/imgtrain/releases) section. 
+
+<pre> 
+chmod u+x ./imgtrain
+</pre>
+
+Optionally, you can this to your `.bash_profile` to make it convenient. 
+
+<pre> 
+export PATH=$PATH:<path to imgtrain> 
+</pre>
 
 ## Usage 
 
