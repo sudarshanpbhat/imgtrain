@@ -4,7 +4,7 @@ Simple command-line utility to merge a set of images/screenshots into a banner w
 
 ## Demo 
 
-<img src="./images/demo.gif" /> <br />
+<img src="./images/demo.gif" /> <br /><br />
 
 ## Download and setup
 
